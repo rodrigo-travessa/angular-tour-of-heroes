@@ -1,4 +1,4 @@
-<h2>My Heroes</h2>
+<h2>My Heroes (hero-component)</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes" 
     [class.selected]="hero === selectedHero" 
@@ -6,13 +6,6 @@
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
-
-<div *ngIf="selectedHero">
-
-  <h2>{{selectedHero.name | uppercase}} Details</h2>
-  <div><span>id: </span> {{selectedHero.id}}</div>
-  <div>
-    <label for="hero-name"> Hero name:</label>
-    <input id="hero-name" [(ngModel)]="selectedHero.name" palceholder="name">
-  </div>
-</div>
+<div>Under this, the hero-details component will be called.</div>
+<div>it is calling app-hero-detail passing [hero] = "selectedHero", this func lives inside Hero-component.ts<br></div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
