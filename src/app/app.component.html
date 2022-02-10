@@ -1,7 +1,25 @@
-<h1>{{title}} (appcomponent)</h1>
-<nav>
-    <a routerLink="/heroes">Heroes</a><br>
-    <a routerLink="/dashboard">Dashboard</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<header>
+    <nav id="NavBar" class="topnav">
+            
+        <a  class ="active" id="dashboard" routerLink="/dashboard" onclick="setActive(this.id)"> Dashboard </a>
+        <a id="heroes" routerLink="/heroes" onclick="setActive(this.id)"> Heroes </a>
+        
+       
+    </nav>
+</header>
+
+<main>
+
+    
+    <h1>{{title}} (appcomponent)</h1>
+    
+    <router-outlet></router-outlet>
+    <app-messages></app-messages>
+    
+</main>
+<footer>
+
+</footer>
+
+
+
